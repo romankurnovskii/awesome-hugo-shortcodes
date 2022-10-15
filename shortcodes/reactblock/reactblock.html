@@ -1,0 +1,17 @@
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<div id="__react_block_render__"></div>
+
+{{ $scriptSrc := .Get "src" }}
+{{ $divRender := or (.Get "divRender") ("__react_block_render__") }}
+
+{{ with resources.GetRemote $scriptSrc }}
+  {{ with .Err }}
+    {{ warnf "%s" . }}
+  {{ else }}
+  {{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
+  {{ $script := .  | js.Build $options }}
+  <script src="{{ $script.RelPermalink }}" divRender={{ $divRender }} defer></script>
+  {{ end }}
+{{ end }}

@@ -14,6 +14,7 @@ A curated list of awesome Hugo shortcodes
 - [Instagram](shortcodes/instagram) - instagram post
 - [Tweet](shortcodes/tweet) - twitter post
 - [Table of Contents](shortcodes/toc) - creates a table of content of the current post
+- [Wikipedia link](shortcodes/wikilink) - Wikipedia link genertor
 
 # Reference
 

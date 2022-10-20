@@ -26,4 +26,4 @@ Insert image with provided attributes
 
 ## Demo
 
-- http://localhost:1313/en/posts/shortcode-examples/img/
+- https://romankurnovskii.com/en/posts/shortcode-examples/img/

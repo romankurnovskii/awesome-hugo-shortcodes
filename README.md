@@ -15,6 +15,7 @@ A curated list of awesome Hugo shortcodes
 - [Tweet](shortcodes/tweet) - twitter post
 - [Table of Contents](shortcodes/toc) - creates a table of content of the current post
 - [Wikipedia link](shortcodes/wikilink) - Wikipedia link genertor
+- [Image](shortcodes/img) - insert resizable image in post
 
 # Reference
 

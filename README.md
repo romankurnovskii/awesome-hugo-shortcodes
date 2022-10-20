@@ -13,7 +13,7 @@ A curated list of awesome Hugo shortcodes
 - [React app](shortcodes/reactblock) - use react app at any Hugo post
 - [Instagram](shortcodes/instagram) - instagram post
 - [Tweet](shortcodes/tweet) - twitter post
-
+- [Table of Contents](shortcodes/toc) - creates a table of content of the current post
 
 # Reference
 

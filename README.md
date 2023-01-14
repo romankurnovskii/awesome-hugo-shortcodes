@@ -10,6 +10,7 @@
 A curated list of awesome Hugo shortcodes
 
 - [Raw HTML](shortcodes/rawhtml) - raw html
+- [JavaScript on page](shortcodes/js_block) - run JavaScript file on any page
 - [React app](shortcodes/reactblock) - use react app at any Hugo post
 - [Instagram](shortcodes/instagram) - instagram post
 - [Tweet](shortcodes/tweet) - twitter post

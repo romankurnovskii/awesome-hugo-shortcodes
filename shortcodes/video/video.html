@@ -1,0 +1,18 @@
+{{- $src := .Get "src" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $width := .Get "width" | default "100%" -}}
+<video width="{{ $width }}" controls>
+    <source src="{{ $src }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+{{ if $title }}
+    <figcaption>{{ $title }}</figcaption>
+{{ end }}
+{{ if $description }}
+    {{ with .Site.GetPage "shortcodes/wikilink" }}
+        {{- .Render "wikilink" (dict "tag" $description "lang" "en") -}}
+    {{ else }}
+        <p>{{ $description }}</p>
+    {{ end }}
+{{ end }}

@@ -17,6 +17,7 @@ A curated list of awesome Hugo shortcodes
 - [Table of Contents](shortcodes/toc) - creates a table of content of the current post
 - [Wikipedia link](shortcodes/wikilink) - Wikipedia link genertor
 - [Image](shortcodes/img) - insert resizable image in post
+- [Video](shortcodes/video) - insert local vidoe in post
 - [Chart.js](shortcodes/chart) - display [Chart.js](https://www.chartjs.org/) diagrams/blocks
 - [hugo-quiz](https://github.com/bonartm/hugo-quiz) - write quizzes with a markdown-like syntax
 

@@ -1,0 +1,10 @@
+<p>
+  <a href="{{ .Site.BaseURL }}/{{ .Get 0 }}.html"
+    >Click here to view this notebook in full screen</a
+  >
+</p>
+<iframe
+  src="{{ .Site.BaseURL }}/{{ .Get 0 }}.html"
+  style="height:{{ .Get 1 }}px;width:100%;border:none;overflow:hidden;"
+  scrolling="no"
+></iframe>

@@ -1,0 +1,28 @@
+name: Convert Jupyter Notebooks
+
+on:
+  push:
+    paths:
+      - "static_files/jupyter/**.ipynb"
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install Jupyter
+        run: pip install notebook
+
+      - name: Convert Notebooks
+        run: |
+          for notebook in $(find static_files/jupyter -name "*.ipynb"); do
+            jupyter nbconvert --to html "$notebook"
+          done

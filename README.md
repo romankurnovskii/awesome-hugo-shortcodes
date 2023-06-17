@@ -13,6 +13,7 @@ A curated list of awesome Hugo shortcodes
 - [JavaScript on page](shortcodes/js_block) - run JavaScript file on any page
 - [React app](shortcodes/reactblock) - use react app at any Hugo post
 - [Instagram](shortcodes/instagram) - instagram post
+- [Notebook](shortcodes/notebook) - render jupyter notebooks
 - [Tweet](shortcodes/tweet) - twitter post
 - [Table of Contents](shortcodes/toc) - creates a table of content of the current post
 - [Wikipedia link](shortcodes/wikilink) - Wikipedia link genertor

@@ -6,12 +6,11 @@
 {{ $scriptSrc := .Get "src" }}
 {{ $divRender := or (.Get "divRender") ("__react_block_render__") }}
 
-{{ with resources.GetRemote $scriptSrc }}
-  {{ with .Err }}
-    {{ warnf "%s" . }}
-  {{ else }}
+{{ $remoteResource := resources.GetRemote $scriptSrc }}
+{{ if not $remoteResource }}
+  {{ warnf "Failed to fetch remote resource: %s" $scriptSrc }}
+{{ else }}
   {{ $options := dict "defines" (dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` $.Site.BaseURL)) }}
-  {{ $script := .  | js.Build $options }}
-  <script src="{{ $script.RelPermalink }}" divRender={{ $divRender }} defer></script>
-  {{ end }}
+  {{ $script := $remoteResource | js.Build $options }}
+  <script src="{{ $script.RelPermalink }}" divRender="{{ $divRender }}" defer></script>
 {{ end }}
